@@ -27,8 +27,14 @@ ext {
 
 dependencies {
 	// implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
+	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.5.Final'
+	implementation group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.5.5.Final'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.16.1'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.16.1'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.16.1'
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-sleuth-core', version: '2.2.7.RELEASE'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

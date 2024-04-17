@@ -8,3 +8,5 @@
 rootProject.name = 'TechnicalTaskJava'
 
 includeBuild 'eureka-server'
+includeBuild 'transaciton-service'
+includeBuild 'api-gateway'
