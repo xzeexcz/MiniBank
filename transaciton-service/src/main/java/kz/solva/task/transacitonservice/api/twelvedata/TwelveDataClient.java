@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.sleuth.annotation.NewSpan;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -41,10 +42,15 @@ public class TwelveDataClient {
     }
 
     @NewSpan("getQuote")
-    private TwelveDataResponse getQuote(String symbol) { // метод для полючения курса одной пары валют
-        logger.info("Отправляю запрос на получение курса валют для пары :{}" , symbol);
-        String url = basicUrl + "/quote?symbol=" + symbol + "&apikey=" + apiKey;
-        logger.info("Успешно получены курсы валют для пары:{}", symbol);
-        return restTemplate.getForObject(url, TwelveDataResponse.class);
+    private TwelveDataResponse getQuote(String symbol) throws RestClientException { // метод для полючения курса одной пары валют
+        try {
+            logger.info("Отправляю запрос на получение курса валют для пары :{}" , symbol);
+            String url = basicUrl + "/quote?symbol=" + symbol + "&apikey=" + apiKey;
+            logger.info("Успешно получены курсы валют для пары:{}", symbol);
+            return restTemplate.getForObject(url, TwelveDataResponse.class);
+        } catch (RestClientException e) {
+            logger.atWarn().log("Что-то пошло не так");
+            throw e;
+        }
     }
 }

@@ -7,6 +7,8 @@ import lombok.Setter;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @Table("t_currency")
@@ -14,7 +16,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 @AllArgsConstructor
 public class Currency {
     @PrimaryKey
-    private Long id;
+    private UUID id;
     private String symbol;
     private String name;
     private String dateTime;
