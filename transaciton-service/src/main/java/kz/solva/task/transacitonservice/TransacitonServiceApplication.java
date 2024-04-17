@@ -1,5 +1,6 @@
 package kz.solva.task.transacitonservice;
 
+import com.datastax.oss.driver.api.core.CqlSession;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

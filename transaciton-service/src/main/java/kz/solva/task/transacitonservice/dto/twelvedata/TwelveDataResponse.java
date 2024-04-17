@@ -1,4 +1,4 @@
-package kz.solva.task.transacitonservice.dto;
+package kz.solva.task.transacitonservice.dto.twelvedata;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;

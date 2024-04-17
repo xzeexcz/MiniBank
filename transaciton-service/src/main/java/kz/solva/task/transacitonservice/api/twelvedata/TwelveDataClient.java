@@ -1,6 +1,6 @@
-package kz.solva.task.transacitonservice.connection;
+package kz.solva.task.transacitonservice.api.twelvedata;
 
-import kz.solva.task.transacitonservice.dto.TwelveDataResponse;
+import kz.solva.task.transacitonservice.dto.twelvedata.TwelveDataResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.sleuth.annotation.NewSpan;
@@ -16,19 +16,19 @@ import java.util.concurrent.Future;
 
 @Component
 public class TwelveDataClient {
-    private final String basicUrl = "https://api.twelvedata.com";
-    private final String apiKey = "0c904e7b9e9449de9e5120bcfdd3c151";
+    private final String basicUrl = "https://api.twelvedata.com"; // Можно будет подумать про application.properties
+    private final String apiKey = "0c904e7b9e9449de9e5120bcfdd3c151"; // тоже самое
     private final RestTemplate restTemplate;
-    private final ExecutorService executorService;
-    private final Logger logger = LoggerFactory.getLogger(TwelveDataResponse.class);
+    private final ExecutorService executorService; // многопоточность concurrent
+    private final Logger logger = LoggerFactory.getLogger(TwelveDataResponse.class); // логирование
 
     public TwelveDataClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
-        this.executorService = Executors.newFixedThreadPool(2);
+        this.executorService = Executors.newFixedThreadPool(2); // сздание двух потоков
 
     }
 
-    public List<TwelveDataResponse> getQuotes() throws ExecutionException, InterruptedException {
+    public List<TwelveDataResponse> getQuotes() throws ExecutionException, InterruptedException { // метод для получения курсов валют
         List<Future<TwelveDataResponse>> quotes = new ArrayList<>();
         quotes.add(executorService.submit(() -> getQuote("USD/KZT")));
         quotes.add(executorService.submit(() -> getQuote("RUB/USD")));
@@ -41,7 +41,7 @@ public class TwelveDataClient {
     }
 
     @NewSpan("getQuote")
-    private TwelveDataResponse getQuote(String symbol) {
+    private TwelveDataResponse getQuote(String symbol) { // метод для полючения курса одной пары валют
         logger.info("Отправляю запрос на получение курса валют для пары :{}" , symbol);
         String url = basicUrl + "/quote?symbol=" + symbol + "&apikey=" + apiKey;
         logger.info("Успешно получены курсы валют для пары:{}", symbol);
