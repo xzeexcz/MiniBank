@@ -12,6 +12,11 @@
                   <project path="$PROJECT_DIR$/api-gateway" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/client-service2" name="client-service">
+                <projects>
+                  <project path="$PROJECT_DIR$/client-service2" />
+                </projects>
+              </build>
               <build path="$PROJECT_DIR$/eureka-server" name="eureka-server">
                 <projects>
                   <project path="$PROJECT_DIR$/eureka-server" />
@@ -30,6 +35,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/api-gateway" />
+            <option value="$PROJECT_DIR$/client-service2" />
             <option value="$PROJECT_DIR$/eureka-server" />
             <option value="$PROJECT_DIR$/transaciton-service" />
           </set>
