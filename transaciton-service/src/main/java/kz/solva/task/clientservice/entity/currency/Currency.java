@@ -1,4 +1,4 @@
-package kz.solva.task.transacitonservice.entity.currency;
+package kz.solva.task.clientservice.entity.currency;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

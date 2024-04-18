@@ -1,6 +1,6 @@
-package kz.solva.task.transacitonservice.api.twelvedata;
+package kz.solva.task.clientservice.api.twelvedata;
 
-import kz.solva.task.transacitonservice.dto.twelvedata.TwelveDataResponse;
+import kz.solva.task.clientservice.dto.twelvedata.TwelveDataResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.sleuth.annotation.NewSpan;

@@ -1,4 +1,4 @@
-package kz.solva.task.transacitonservice.config;
+package kz.solva.task.clientservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

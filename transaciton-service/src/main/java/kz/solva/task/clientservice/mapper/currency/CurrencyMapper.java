@@ -1,11 +1,13 @@
-package kz.solva.task.transacitonservice.mapper.currency;
+package kz.solva.task.clientservice.mapper.currency;
 
-import kz.solva.task.transacitonservice.dto.twelvedata.TwelveDataResponse;
-import kz.solva.task.transacitonservice.entity.currency.Currency;
+import kz.solva.task.clientservice.dto.twelvedata.TwelveDataResponse;
+import kz.solva.task.clientservice.entity.currency.Currency;
 import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+
+import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface CurrencyMapper {
@@ -19,4 +21,5 @@ public interface CurrencyMapper {
             @Mapping(target = "previous_close", source = "previous_close"),
     })
     Currency toCurrencyEntity(TwelveDataResponse twelveDataResponse);
+    List<Currency> toCurrencyEntityList(List<TwelveDataResponse> responses);
 }
