@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequiredArgsConstructor
-public class controller {
+public class CurrencyController {
 
     private final CurrencyService currencyService;
 

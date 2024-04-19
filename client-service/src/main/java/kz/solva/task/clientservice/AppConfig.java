@@ -12,11 +12,4 @@ public class AppConfig {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
-
-//    CqlSession cqlSession = CqlSession.builder().withKeyspace("techtask").build();
-//
-//    @Bean
-//    public CassandraTemplate cassandraTemplate() {
-//        return new CassandraTemplate(cqlSession);
-//    }
 }
