@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
 @Service
@@ -27,7 +28,8 @@ public class LimitServiceImpl implements LimitService {
     @Override
     public Limit isExists(BigDecimal account, ExpenseCategory expenseCategory) {
         logger.info("Проверяю есть ли ранее установленный лимит для этого аккаунта и типа транзакции в БД");
-        Limit limit = limitRepo.findFirstByAccountAndExpenseCategoryEqualsOrderByDateTimeDesc(account, expenseCategory);
+//        Limit limit = limitRepo.findFirstByAccountAndExpenseCategoryEqualsOrderByDateTimeDesc(account, expenseCategory);
+        Limit limit = limitRepo.findRecentLimits2(account,expenseCategory, ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC));
         if (limit != null) {
             return limit;
         } else {
