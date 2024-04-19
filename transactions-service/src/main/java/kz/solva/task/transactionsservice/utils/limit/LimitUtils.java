@@ -48,9 +48,9 @@ public class LimitUtils {
             case RUB -> {
                 currencyDto = requestCurrencyPair(currencyShortname.toString() + "/USD");
                 if (currencyDto != null || currencyDto.getClose() == 0) {
-                    convertedToDollar = PaymentSum / currencyDto.getPreviousClose();
+                    convertedToDollar = PaymentSum * currencyDto.getPreviousClose();
                 } else {
-                    convertedToDollar = PaymentSum / currencyDto.getClose();
+                    convertedToDollar = PaymentSum * currencyDto.getClose();
                 }
                 return Math.round((convertedToDollar * 100.00) / 100.00);
             }

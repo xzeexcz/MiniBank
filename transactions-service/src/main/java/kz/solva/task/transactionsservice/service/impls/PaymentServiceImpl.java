@@ -72,10 +72,10 @@ public class PaymentServiceImpl implements PaymentService {
                     loggerLimit.info("Установка лимита для этого счета и типа транзакции.");
 
                     Limit limit1 = new Limit();
-                    limit1.setLimitSum(1000.00);
-                    limit1.setLimitBalance(limitUtils.doCalculateLimitBalance(limit1.getLimitSum(), paymentDto.getSum(), paymentDto.getCurrencyShortname()));
-                    limit1.setAccount(paymentDto.getAccount_from());
-                    limit1.setExpenseCategory(paymentDto.getExpenseCategory());
+                    limit1.setLimitSum(1000);
+                    limit1.setLimitBalance(limitUtils.doCalculateLimitBalance(limit1.getLimitSum(), payment.getSum(), payment.getCurrencyShortname()));
+                    limit1.setAccount(payment.getAccount_from());
+                    limit1.setExpenseCategory(payment.getExpenseCategory());
                     limit1.setCurrencyShortname(CurrencyShortname.USD);
                     limit1.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
 

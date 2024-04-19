@@ -84,8 +84,12 @@ public class CurrencyServiceImpl implements CurrencyService {
             return null;
         } else {
             switch (currencyPair) {
-                case "USD/KZT": currencyDto = getCurrencyKzt();
-                case "RUB/USD": currencyDto = getCurrencyRub();
+                case "USD/KZT":
+                    currencyDto = getCurrencyKzt();
+                    break;
+                case "RUB/USD":
+                    currencyDto = getCurrencyRub();
+                    break;
             }
             return currencyDto;
         }
