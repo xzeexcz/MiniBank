@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="adia@localhost">
+  <database-model serializer="dbm" dbms="CASSANDRA" family-id="CASSANDRA" format-version="4.49">
+    <root id="1">
+      <ServerVersion>4.1.4</ServerVersion>
+    </root>
+    <role id="2" parent="1" name="cassandra">
+      <CanLogin>1</CanLogin>
+      <SuperRole>1</SuperRole>
+    </role>
+    <schema id="3" parent="1" name="adia">
+      <Current>1</Current>
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
+</Properties>
+    </schema>
+    <schema id="4" parent="1" name="spring_cassandra">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
+</Properties>
+    </schema>
+    <schema id="5" parent="1" name="system">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.LocalStrategy&apos;}
+</Properties>
+    </schema>
+    <schema id="6" parent="1" name="system_auth">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
+</Properties>
+    </schema>
+    <schema id="7" parent="1" name="system_distributed">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;3&apos;}
+</Properties>
+    </schema>
+    <schema id="8" parent="1" name="system_schema">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.LocalStrategy&apos;}
+</Properties>
+    </schema>
+    <schema id="9" parent="1" name="system_traces">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;2&apos;}
+</Properties>
+    </schema>
+    <schema id="10" parent="1" name="system_views">
+      <Virtual>1</Virtual>
+    </schema>
+    <schema id="11" parent="1" name="system_virtual_schema">
+      <Virtual>1</Virtual>
+    </schema>
+    <schema id="12" parent="1" name="techtask">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
+</Properties>
+    </schema>
+    <table id="13" parent="3" name="t_currency">
+      <Properties>caching:{&apos;keys&apos;: &apos;ALL&apos;, &apos;rows_per_partition&apos;: &apos;NONE&apos;}
+compression:{&apos;chunk_length_in_kb&apos;: &apos;16&apos;, &apos;class&apos;: &apos;org.apache.cassandra.io.compress.LZ4Compressor&apos;}
+bloom_filter_fp_chance:0.01
+default_time_to_live:0
+speculative_retry:99p
+gc_grace_seconds:864000
+max_index_interval:2048
+memtable_flush_period_in_ms:0
+min_index_interval:128
+read_repair_chance:0
+cdc:false
+crc_check_chance:1
+dclocal_read_repair_chance:0
+compaction:{&apos;class&apos;: &apos;org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy&apos;, &apos;max_threshold&apos;: &apos;32&apos;, &apos;min_threshold&apos;: &apos;4&apos;}
+additional_write_policy:99p
+</Properties>
+    </table>
+    <column id="14" parent="13" name="id">
+      <DasType>uuid|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="15" parent="13" name="close">
+      <DasType>double|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="16" parent="13" name="datetime">
+      <DasType>text|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="17" parent="13" name="name">
+      <DasType>text|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="18" parent="13" name="previousclose">
+      <DasType>double|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="19" parent="13" name="symbol">
+      <DasType>text|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <key id="20" parent="13" name="primary key">
+      <Columns>id
+</Columns>
+    </key>
+  </database-model>
+</dataSource>

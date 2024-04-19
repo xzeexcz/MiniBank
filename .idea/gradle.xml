@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/api-gateway" name="api-gateway">
+                <projects>
+                  <project path="$PROJECT_DIR$/api-gateway" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/client-service" name="client-service">
+                <projects>
+                  <project path="$PROJECT_DIR$/client-service" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/eureka-server" name="eureka-server">
+                <projects>
+                  <project path="$PROJECT_DIR$/eureka-server" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/transactions-service" name="transactions-service">
+                <projects>
+                  <project path="$PROJECT_DIR$/transactions-service" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="openjdk-20" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/api-gateway" />
+            <option value="$PROJECT_DIR$/client-service" />
+            <option value="$PROJECT_DIR$/eureka-server" />
+            <option value="$PROJECT_DIR$/transactions-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
