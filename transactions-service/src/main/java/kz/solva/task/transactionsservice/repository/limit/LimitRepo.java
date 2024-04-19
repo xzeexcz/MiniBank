@@ -20,6 +20,11 @@ public interface LimitRepo extends JpaRepository<Limit, UUID> {
     Limit findRecentLimits(@Param("account") BigDecimal account, @Param("category") ExpenseCategory category, @Param("startDate") ZonedDateTime startDate);
 
     @Query("SELECT l FROM Limit l WHERE l.account = :account AND l.expenseCategory = :category AND " +
-            "(l.dateTime >= :startDate OR NOT EXISTS (SELECT 1 FROM Limit l2 WHERE l2.account = :account AND l2.expenseCategory = :category AND l2.dateTime > :startDate))")
+            "(l.dateTime >= :startDate OR NOT EXISTS (SELECT 1 FROM Limit l2 WHERE l2.account = :account AND l2.expenseCategory = :category AND l2.dateTime > :startDate)) " +
+            "ORDER BY l.dateTime DESC")
     Limit findRecentLimits2(@Param("account") BigDecimal account, @Param("category") ExpenseCategory category, @Param("startDate") ZonedDateTime startDate);
+
+    @Query("SELECT l FROM Limit l WHERE l.account = :account AND l.expenseCategory = :category " +
+            "AND l.dateTime = (SELECT MAX(l2.dateTime) FROM Limit l2 WHERE l2.account = :account AND l2.expenseCategory = :category)")
+    Limit findRecentLimits3(@Param("account") BigDecimal account, @Param("category") ExpenseCategory category);
 }

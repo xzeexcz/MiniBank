@@ -19,6 +19,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Service
 @RequiredArgsConstructor
@@ -31,6 +33,7 @@ public class PaymentServiceImpl implements PaymentService {
     private final PaymentUtils paymentUtils;
     private final Logger logger = LoggerFactory.getLogger(Payment.class);
     private final Logger loggerLimit = LoggerFactory.getLogger(Limit.class);
+    private final ExecutorService executorService = Executors.newFixedThreadPool(4);
 
     @Override
     public ResponseEntity<? extends Object> makePayment(PaymentDto paymentDto) {
@@ -54,18 +57,18 @@ public class PaymentServiceImpl implements PaymentService {
                     newLimit.setDateTime(ZonedDateTime.now());
                     newLimit.setLimitSum(limit.getLimitSum());
 
-                    limitRepo.save(newLimit);
-
-                    logger.info("Регистрация транзакции.");
-
-                    if (setFlag(payment.getSum(), limit.getLimitBalance(), payment.getCurrencyShortname())) {
-                        payment.setLimit_exceded(true);
-                    } else {
-                        payment.setLimit_exceded(false);
-                    }
-                    payment.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
-
-                    paymentRepo.save(payment);
+                    executorService.submit(() -> {
+                        limitRepo.save(newLimit);
+                    });
+                    executorService.submit(() -> {
+                        if (setFlag(payment.getSum(), limit.getLimitBalance(), payment.getCurrencyShortname())) {
+                            payment.setLimit_exceded(true);
+                        } else {
+                            payment.setLimit_exceded(false);
+                        }
+                        payment.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
+                        paymentRepo.save(payment);
+                    });
 
                 } else {
                     loggerLimit.info("Нет ранее установленного лимита для этого счета и типа транзакции.");
@@ -79,18 +82,18 @@ public class PaymentServiceImpl implements PaymentService {
                     limit1.setCurrencyShortname(CurrencyShortname.USD);
                     limit1.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
 
-                    limitRepo.save(limit1);
-
-                    logger.info("Регистрация транзакции.");
-
-                    if (setFlag(payment.getSum(), limit1.getLimitSum(), payment.getCurrencyShortname())) {
-                        payment.setLimit_exceded(true);
-                    } else {
-                        payment.setLimit_exceded(false);
-                    }
-                    payment.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
-
-                    paymentRepo.save(payment);
+                    executorService.submit(() -> {
+                        limitRepo.save(limit1);
+                    });
+                    executorService.submit(() -> {
+                        if (setFlag(payment.getSum(), limit1.getLimitSum(), payment.getCurrencyShortname())) {
+                            payment.setLimit_exceded(true);
+                        } else {
+                            payment.setLimit_exceded(false);
+                        }
+                        payment.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
+                        paymentRepo.save(payment);
+                    });
                 }
             } catch (NullPointerException e) {
                 logger.atWarn().log("Произошла ошибка при проверке на ранее установленный лимит");

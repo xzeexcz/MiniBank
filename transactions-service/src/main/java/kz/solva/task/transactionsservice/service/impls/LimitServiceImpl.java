@@ -29,7 +29,8 @@ public class LimitServiceImpl implements LimitService {
     public Limit isExists(BigDecimal account, ExpenseCategory expenseCategory) {
         logger.info("Проверяю есть ли ранее установленный лимит для этого аккаунта и типа транзакции в БД");
 //        Limit limit = limitRepo.findFirstByAccountAndExpenseCategoryEqualsOrderByDateTimeDesc(account, expenseCategory);
-        Limit limit = limitRepo.findRecentLimits2(account,expenseCategory, ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC));
+//        Limit limit = limitRepo.findRecentLimits2(account,expenseCategory, ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC));
+        Limit limit = limitRepo.findRecentLimits3(account,expenseCategory);
         if (limit != null) {
             return limit;
         } else {
