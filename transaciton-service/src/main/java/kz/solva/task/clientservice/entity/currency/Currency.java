@@ -9,6 +9,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.util.UUID;
 
+
 @Getter
 @Setter
 @Table("t_currency")
@@ -21,5 +22,5 @@ public class Currency {
     private String name;
     private String dateTime;
     private double close;
-    private double previous_close;
+    private double previousClose;
 }

@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="adia@127.0.0.1" uuid="19437c99-83bb-465f-990b-baf70f71ec01">
+    <data-source source="LOCAL" name="techtask@127.0.0.1" uuid="19437c99-83bb-465f-990b-baf70f71ec01">
       <driver-ref>cassandra</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.CassandraJdbcDriver</jdbc-driver>
-      <jdbc-url>jdbc:cassandra://127.0.0.1:9042/adia</jdbc-url>
+      <jdbc-url>jdbc:cassandra://127.0.0.1:9042/techtask</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="postgres@localhost" uuid="ad2a1d71-7693-4fef-b5b6-e4cd11022615">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:2345/postgres</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="techtask@localhost" uuid="9f7cf16c-e992-4ac5-b1e7-f198b8b3e4b3">
+      <driver-ref>cassandra</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.CassandraJdbcDriver</jdbc-driver>
+      <jdbc-url>jdbc:cassandra://localhost:9042/techtask</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="adia@localhost" uuid="bc9d59b9-6241-4653-a2b1-c36767c22f66">
+      <driver-ref>cassandra</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.CassandraJdbcDriver</jdbc-driver>
+      <jdbc-url>jdbc:cassandra://localhost:9042/adia</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

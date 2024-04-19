@@ -1,8 +1,11 @@
 package kz.solva.task.clientservice.config;
 
+import com.datastax.oss.driver.api.core.CqlSession;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.config.*;
+import org.springframework.data.cassandra.core.CassandraAdminTemplate;
+import org.springframework.data.cassandra.core.CassandraTemplate;
 import org.springframework.data.cassandra.core.cql.keyspace.CreateKeyspaceSpecification;
 import org.springframework.data.cassandra.core.cql.keyspace.DropKeyspaceSpecification;
 import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption;
@@ -25,6 +28,15 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
         sessionFactoryBean.setLocalDatacenter(LOCAL_DATA_CENTER);
         return sessionFactoryBean;
     }
+
+
+
+//    CqlSession = CqlSession.builder().withKeyspace(KEYSPACE).build();
+//
+////    @Bean
+////    public CassandraTemplate cassandraTemplate() {
+////        return new CassandraTemplate(cqlSession);
+////    }
 
     @Override
     public SchemaAction getSchemaAction() {
@@ -50,7 +62,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 
     @Override
     public String[] getEntityBasePackages() {
-        return new String[] {"kz.solva.task.transacitonservice.entity.currency"};
+        return new String[] {"kz.solva.task.clientservice.entity.currency"};
     }
 
 }
