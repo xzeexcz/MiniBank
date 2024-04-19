@@ -86,11 +86,7 @@ public class PaymentServiceImpl implements PaymentService {
                         limitRepo.save(limit1);
                     });
                     executorService.submit(() -> {
-                        if (setFlag(payment.getSum(), limit1.getLimitSum(), payment.getCurrencyShortname())) {
-                            payment.setLimit_exceded(true);
-                        } else {
-                            payment.setLimit_exceded(false);
-                        }
+                        payment.setLimit_exceded(setFlag(payment.getSum(), limit1.getLimitSum(), payment.getCurrencyShortname()));
                         payment.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
                         paymentRepo.save(payment);
                     });
@@ -107,11 +103,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public boolean setFlag(double paymentSum, double limitSum, CurrencyShortname currencyShortname) {
-        if (paymentUtils.isBiggerThanLimit(paymentSum, limitSum, currencyShortname)) {
-            return true;
-        } else {
-            return false;
-        }
+        return paymentUtils.isBiggerThanLimit(paymentSum, limitSum, currencyShortname);
     }
 }
 

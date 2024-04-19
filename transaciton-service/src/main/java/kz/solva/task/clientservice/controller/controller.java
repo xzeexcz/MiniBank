@@ -16,10 +16,6 @@ import java.util.concurrent.ExecutionException;
 public class controller {
 
     private final CurrencyService currencyService;
-    @GetMapping("/get")
-    public String hello() {
-        return "Hello,world";
-    }
 
     @PostMapping("/currency")
     public ResponseEntity<? extends Object> getCurrency() throws ExecutionException, InterruptedException {

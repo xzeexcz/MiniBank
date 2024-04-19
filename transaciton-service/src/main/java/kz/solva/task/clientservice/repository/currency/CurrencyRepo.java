@@ -11,7 +11,6 @@ import java.util.UUID;
 
 @Repository
 public interface CurrencyRepo extends CassandraRepository<Currency, UUID> {
-    Currency findFirstBySymbolEqualsOrderByDateTimeDesc(String symbol);
 
     @Query("SELECT * FROM t_currency WHERE symbol= :symbol ALLOW FILTERING")
     List<Currency> findBySymbolEquals(@Param("symbol") String symbol);

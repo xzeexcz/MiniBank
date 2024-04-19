@@ -83,14 +83,11 @@ public class CurrencyServiceImpl implements CurrencyService {
         if (currencyPair.isEmpty()) {
             return null;
         } else {
-            switch (currencyPair) {
-                case "USD/KZT":
-                    currencyDto = getCurrencyKzt();
-                    break;
-                case "RUB/USD":
-                    currencyDto = getCurrencyRub();
-                    break;
-            }
+            currencyDto = switch (currencyPair) {
+                case "USD/KZT" -> getCurrencyKzt();
+                case "RUB/USD" -> getCurrencyRub();
+                default -> currencyDto;
+            };
             return currencyDto;
         }
     }

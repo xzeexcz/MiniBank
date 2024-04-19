@@ -11,9 +11,8 @@ public class LimitUtils {
     RestTemplate restTemplate = new RestTemplate();
 
     public CurrencyDto requestCurrencyPair(String currencyPair) {
-        CurrencyDto currencyDto = restTemplate
+        return restTemplate
                 .getForObject(Basic_URL + "/currency-close?symbol=" + currencyPair, CurrencyDto.class);
-        return currencyDto;
     }
 
     public double doCalculateLimitBalance(double limitSum, double sum, CurrencyShortname currencyShortname) {

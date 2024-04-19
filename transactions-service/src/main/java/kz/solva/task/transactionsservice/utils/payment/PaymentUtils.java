@@ -14,11 +14,7 @@ public class PaymentUtils {
         switch (currencyShortname) {
             case KZT, RUB, USD -> {
                 double total = limitUtils.doConvertToDollar(paymentSum, currencyShortname);
-                if (total > limitSum) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return total > limitSum;
             }
             default -> {
                 return false;
