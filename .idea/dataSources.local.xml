@@ -19,7 +19,6 @@
     <data-source name="adia@localhost" uuid="c1dc1e44-5460-459e-85bb-8e95e75cb2f9">
       <database-info product="Cassandra" version="4.1.4" jdbc-version="4.2" driver-name="Cassandra JDBC Driver" driver-version="1.4" dbms="CASSANDRA" exact-version="4.1.4" exact-driver-version="1.4">
         <identifier-quote-string>&quot;</identifier-quote-string>
-        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>

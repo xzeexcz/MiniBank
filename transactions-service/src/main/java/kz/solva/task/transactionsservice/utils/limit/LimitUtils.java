@@ -1,12 +1,15 @@
 package kz.solva.task.transactionsservice.utils.limit;
 
+import kz.solva.task.transactionsservice.api.ClientLimitRequest;
 import kz.solva.task.transactionsservice.dto.currency.CurrencyDto;
 import kz.solva.task.transactionsservice.entity.enums.CurrencyShortname;
+import kz.solva.task.transactionsservice.entity.enums.ExpenseCategory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class LimitUtils {
+public final class LimitUtils {
+    private LimitUtils() {}
     private static final String Basic_URL = "http://localhost:8888/client";
     RestTemplate restTemplate = new RestTemplate();
 
@@ -60,5 +63,27 @@ public class LimitUtils {
                 return convertedToDollar;
             }
         }
+    }
+
+    public boolean checkData(ClientLimitRequest clientLimitRequest) {
+            if (clientLimitRequest.getAccount() == null || clientLimitRequest.getExpenseCategory() == null) {
+                return false;
+            }
+
+            double limit;
+            try {
+                limit = Double.parseDouble(String.valueOf(clientLimitRequest.getLimit()));
+            } catch (NumberFormatException e) {
+                return false;
+            }
+            if (limit < 1000) {
+                return false;
+            }
+
+            ExpenseCategory expenseCategory = clientLimitRequest.getExpenseCategory();
+            if (expenseCategory != ExpenseCategory.PRODUCT && expenseCategory != ExpenseCategory.SERVICE) {
+                return false;
+            }
+            return true;
     }
 }

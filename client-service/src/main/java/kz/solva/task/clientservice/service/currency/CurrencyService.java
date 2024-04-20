@@ -10,4 +10,5 @@ public interface CurrencyService {
     CurrencyDto getCurrencyKzt() throws ExecutionException, InterruptedException;
     CurrencyDto getCurrencyRub() throws ExecutionException, InterruptedException;
     CurrencyDto getCurrencyPair(String currencyPair) throws ExecutionException, InterruptedException;
+
 }

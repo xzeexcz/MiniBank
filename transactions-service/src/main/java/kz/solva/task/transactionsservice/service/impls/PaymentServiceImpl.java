@@ -1,5 +1,6 @@
 package kz.solva.task.transactionsservice.service.impls;
 
+import kz.solva.task.transactionsservice.api.ClientLimitRequest;
 import kz.solva.task.transactionsservice.dto.payment.PaymentDto;
 import kz.solva.task.transactionsservice.entity.enums.CurrencyShortname;
 import kz.solva.task.transactionsservice.entity.limit.Limit;
@@ -104,6 +105,49 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public boolean setFlag(double paymentSum, double limitSum, CurrencyShortname currencyShortname) {
         return paymentUtils.isBiggerThanLimit(paymentSum, limitSum, currencyShortname);
+    }
+
+    @Override
+    public ResponseEntity<?> setNewLimit(ClientLimitRequest clientLimitRequest) {
+        if (clientLimitRequest != null) {
+            if (limitUtils.checkData(clientLimitRequest)) {
+                try {
+                    loggerLimit.info("Проверка на ранее установленный лимит для этого типа транзакии и аккаунта");
+                    Limit limit = limitRepo.findRecentLimits3(clientLimitRequest.getAccount(), clientLimitRequest.getExpenseCategory());
+
+                    if (limit != null) {
+
+                        Limit limit1 = new Limit();
+                        loggerLimit.info("Установка нового лимита для этого типа транзакции и аккаунта с учетом раннее установленного лимита");
+
+                        executorService.submit(() -> {
+
+                            limit1.setLimitSum(clientLimitRequest.getLimit());
+                            limit1.setDateTime(ZonedDateTime.now(ZoneId.of("Asia/Almaty")));
+                            limit1.setLimitBalance((clientLimitRequest.getLimit() + (limit.getLimitBalance())));
+                            limit1.setAccount(clientLimitRequest.getAccount());
+                            limit1.setExpenseCategory(clientLimitRequest.getExpenseCategory());
+                            limit1.setCurrencyShortname(limit.getCurrencyShortname());
+                            limitRepo.save(limit1);
+
+                        });
+
+                        loggerLimit.info("Установлен новый лимит для этого типа транзакции и аккаунта");
+                        return ResponseEntity.ok("Установка лимита прошла успешно");
+                    } else {
+                        loggerLimit.info("Не существует ранее установленного лимита для этого типа транзакции");
+                        return ResponseEntity.ok("Не существует ранее установленного лимита для этого типа транзакции");
+                    }
+                } catch (NullPointerException e) {
+                    loggerLimit.info("Что то пошло не так...");
+                    return ResponseEntity.ok("Произошла ошибка");
+                }
+            } else {
+                return ResponseEntity.ok("Данные неверны");
+            }
+        } else {
+            return ResponseEntity.ok("Запрос изменение лимита не может быть пустым");
+        }
     }
 }
 

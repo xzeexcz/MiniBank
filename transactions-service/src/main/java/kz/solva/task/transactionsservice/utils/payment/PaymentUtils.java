@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class PaymentUtils {
+public final class PaymentUtils {
     private final LimitUtils limitUtils;
 
     public boolean isBiggerThanLimit(double paymentSum, double limitSum, CurrencyShortname currencyShortname) {

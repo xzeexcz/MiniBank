@@ -4,31 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75413929-691e-4c46-8f0c-10f81c931d0e" name="Changes" comment="Onemore">
-      <change afterPath="$PROJECT_DIR$/.idea/.name 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace 2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/api/ClientLimitRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/controller/limit/LimitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8daa3d10-6fe8-483c-9d98-08da077fb0e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8daa3d10-6fe8-483c-9d98-08da077fb0e7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1dc1e44-5460-459e-85bb-8e95e75cb2f9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1dc1e44-5460-459e-85bb-8e95e75cb2f9.xml" afterDir="false" />
+    <list default="true" id="75413929-691e-4c46-8f0c-10f81c931d0e" name="Changes" comment="Working micro v1 arch">
+      <change afterPath="$PROJECT_DIR$/transactions-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/TransactionsServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/dto/PaymentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/entity/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/entity/enums/CurrencyShortname.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/entity/enums/ExpenseCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/mapper/PaymentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/repository/PaymentRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/test/java/kz/solva/task/transactionsservice/TransactionsServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/currency/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/currency/CurrencyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/impls/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/impls/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/payment/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/payment/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/utils/limit/LimitUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/utils/limit/LimitUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/utils/payment/PaymentUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/utils/payment/PaymentUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +108,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -134,8 +131,8 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "postgresql",
-      "cassandra"
+      "cassandra",
+      "postgresql"
     ]
   }
 }]]></component>
@@ -154,7 +151,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ClientServiceApplication">
+  <component name="RunManager" selected="Gradle.transactions-service [build]">
     <configuration name="Tests in 'eureka-server'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -177,12 +174,34 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="transaciton-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/transaciton-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="transactions-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/transactions-service" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -206,8 +225,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="client-service.main" />
+    <configuration name="ClientServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kz.solva.task.client-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.clientservice.ClientServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,13 +234,6 @@
     </configuration>
     <configuration name="ClientServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="client-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.clientservice.ClientServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClientServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="transaciton-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.clientservice.ClientServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,6 +252,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransacitonServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="transaciton-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.clientservice.TransacitonServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TransactionsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="transactions-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.transactionsservice.TransactionsServiceApplication" />
@@ -248,17 +267,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.transaciton-service [build]" />
       <item itemvalue="Gradle.transactions-service [build]" />
       <item itemvalue="Gradle.Tests in 'eureka-server'" />
       <item itemvalue="Spring Boot.ClientServiceApplication" />
+      <item itemvalue="Spring Boot.ClientServiceApplication (1)" />
       <item itemvalue="Spring Boot.TransactionsServiceApplication" />
+      <item itemvalue="Spring Boot.TransacitonServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication " />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.EurekaServerApplication " />
         <item itemvalue="Gradle.transactions-service [build]" />
+        <item itemvalue="Spring Boot.EurekaServerApplication " />
+        <item itemvalue="Gradle.transaciton-service [build]" />
         <item itemvalue="Gradle.Tests in 'eureka-server'" />
       </list>
     </recent_temporary>
@@ -275,9 +298,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713286262727</updated>
       <workItem from="1713286263784" duration="2102000" />
-      <workItem from="1713288497248" duration="94178000" />
-      <workItem from="1713560531790" duration="1462000" />
-      <workItem from="1713605369771" duration="11775000" />
+      <workItem from="1713288497248" duration="41534000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -351,63 +372,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713428215157</updated>
     </task>
-    <task id="LOCAL-00010" summary="Добавлен второй клиентский сервис. Выполнено четыре пункта из 6">
-      <option name="closed" value="true" />
-      <created>1713546963030</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1713546963030</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Корректно работают транзакции - по всем валютам">
-      <option name="closed" value="true" />
-      <created>1713549839076</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1713549839076</updated>
-    </task>
-    <task id="LOCAL-00012" summary="ПОЛНОСТЬЮ РАБОЧИЕ ТРАНЗААКЦИИ">
-      <option name="closed" value="true" />
-      <created>1713555546321</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1713555546322</updated>
-    </task>
-    <task id="LOCAL-00013" summary="100% рабочие транзакции">
-      <option name="closed" value="true" />
-      <created>1713558234861</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1713558234861</updated>
-    </task>
-    <task id="LOCAL-00014" summary="немного улучшил читаемость кода">
-      <option name="closed" value="true" />
-      <created>1713559063718</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1713559063718</updated>
-    </task>
-    <task id="LOCAL-00015" summary="рефакторинг">
-      <option name="closed" value="true" />
-      <created>1713561285082</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1713561285082</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Onemore">
-      <option name="closed" value="true" />
-      <created>1713561302382</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1713561302382</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,13 +400,6 @@
     <MESSAGE value="Client service added + transaction service working at" />
     <MESSAGE value="New service" />
     <MESSAGE value="Working micro v1 arch" />
-    <MESSAGE value="Добавлен второй клиентский сервис. Выполнено четыре пункта из 6" />
-    <MESSAGE value="Корректно работают транзакции - по всем валютам" />
-    <MESSAGE value="ПОЛНОСТЬЮ РАБОЧИЕ ТРАНЗААКЦИИ" />
-    <MESSAGE value="100% рабочие транзакции" />
-    <MESSAGE value="немного улучшил читаемость кода" />
-    <MESSAGE value="рефакторинг" />
-    <MESSAGE value="Onemore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Onemore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working micro v1 arch" />
   </component>
 </project>
