@@ -20,6 +20,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -148,6 +150,11 @@ public class PaymentServiceImpl implements PaymentService {
         } else {
             return ResponseEntity.ok("Запрос изменение лимита не может быть пустым");
         }
+    }
+
+    @Override
+    public List<Map<String, Object>> findPaymentsWithLimitExceeded() {
+        return paymentRepo.findPaymentsWithLimitExceeded();
     }
 }
 
