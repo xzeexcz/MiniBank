@@ -14,46 +14,46 @@
 replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
 </Properties>
     </schema>
-    <schema id="4" parent="1" name="system_auth">
+    <schema id="4" parent="1" name="spring_cassandra">
       <Properties>durable_writes:true
 replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
 </Properties>
     </schema>
-    <schema id="5" parent="1" name="system_schema">
+    <schema id="5" parent="1" name="system">
       <Properties>durable_writes:true
 replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.LocalStrategy&apos;}
 </Properties>
     </schema>
-    <schema id="6" parent="1" name="techtask">
+    <schema id="6" parent="1" name="system_auth">
       <Properties>durable_writes:true
 replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
 </Properties>
     </schema>
-    <schema id="7" parent="1" name="spring_cassandra">
-      <Properties>durable_writes:true
-replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
-</Properties>
-    </schema>
-    <schema id="8" parent="1" name="system_distributed">
+    <schema id="7" parent="1" name="system_distributed">
       <Properties>durable_writes:true
 replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;3&apos;}
 </Properties>
     </schema>
-    <schema id="9" parent="1" name="system">
+    <schema id="8" parent="1" name="system_schema">
       <Properties>durable_writes:true
 replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.LocalStrategy&apos;}
 </Properties>
     </schema>
-    <schema id="10" parent="1" name="system_traces">
+    <schema id="9" parent="1" name="system_traces">
       <Properties>durable_writes:true
 replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;2&apos;}
 </Properties>
     </schema>
-    <schema id="11" parent="1" name="system_views">
+    <schema id="10" parent="1" name="system_views">
       <Virtual>1</Virtual>
     </schema>
-    <schema id="12" parent="1" name="system_virtual_schema">
+    <schema id="11" parent="1" name="system_virtual_schema">
       <Virtual>1</Virtual>
+    </schema>
+    <schema id="12" parent="1" name="techtask">
+      <Properties>durable_writes:true
+replication:{&apos;class&apos;: &apos;org.apache.cassandra.locator.SimpleStrategy&apos;, &apos;replication_factor&apos;: &apos;1&apos;}
+</Properties>
     </schema>
     <table id="13" parent="3" name="t_currency">
       <Properties>caching:{&apos;keys&apos;: &apos;ALL&apos;, &apos;rows_per_partition&apos;: &apos;NONE&apos;}

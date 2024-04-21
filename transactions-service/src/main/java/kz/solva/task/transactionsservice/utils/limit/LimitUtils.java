@@ -4,18 +4,25 @@ import kz.solva.task.transactionsservice.api.ClientLimitRequest;
 import kz.solva.task.transactionsservice.dto.currency.CurrencyDto;
 import kz.solva.task.transactionsservice.entity.enums.CurrencyShortname;
 import kz.solva.task.transactionsservice.entity.enums.ExpenseCategory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
 public final class LimitUtils {
     private LimitUtils() {}
-    private static final String Basic_URL = "http://localhost:8888/client";
+
+    @Value("${api.transactions.url}")
+    private String Basic_URL;
+    @Value("${api.transactions.endpoint}")
+    private String ENDPOINT_URL;
+    private final static String USD_KZT = "USD/";
+    private final static String RUB_USD = "/USD";
     RestTemplate restTemplate = new RestTemplate();
 
     public CurrencyDto requestCurrencyPair(String currencyPair) {
         return restTemplate
-                .getForObject(Basic_URL + "/currency-close?symbol=" + currencyPair, CurrencyDto.class);
+                .getForObject(Basic_URL + ENDPOINT_URL + "?symbol=" + currencyPair, CurrencyDto.class);
     }
 
     public double doCalculateLimitBalance(double limitSum, double sum, CurrencyShortname currencyShortname) {
@@ -39,7 +46,7 @@ public final class LimitUtils {
         CurrencyDto currencyDto;
         switch (currencyShortname) {
             case KZT -> {
-                currencyDto = requestCurrencyPair("USD/" + currencyShortname.toString());
+                currencyDto = requestCurrencyPair(USD_KZT + currencyShortname.toString());
                 if (currencyDto != null || currencyDto.getClose() == 0) {
                     convertedToDollar = PaymentSum / currencyDto.getPreviousClose();
                 } else {
@@ -48,7 +55,7 @@ public final class LimitUtils {
                 return Math.round((convertedToDollar * 100.00) / 100.00);
             }
             case RUB -> {
-                currencyDto = requestCurrencyPair(currencyShortname.toString() + "/USD");
+                currencyDto = requestCurrencyPair(currencyShortname.toString() + RUB_USD);
                 if (currencyDto != null || currencyDto.getClose() == 0) {
                     convertedToDollar = PaymentSum * currencyDto.getPreviousClose();
                 } else {

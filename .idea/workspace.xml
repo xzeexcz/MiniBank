@@ -4,16 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75413929-691e-4c46-8f0c-10f81c931d0e" name="Changes" comment="Добавлена функция установления нового лимита">
-      <change afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/controller/TransactionsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/transactions/TransactionsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/transactions/impl/TransactionsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/utils/transactions/TransactionsUtils.java" afterDir="false" />
+    <list default="true" id="1df2f1f8-1dee-492c-a801-5bfae9a5be65" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/da1e6a33-43de-4373-a74f-05d73e951446/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-service/src/main/resources/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name 2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8daa3d10-6fe8-483c-9d98-08da077fb0e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da1e6a33-43de-4373-a74f-05d73e951446.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8daa3d10-6fe8-483c-9d98-08da077fb0e7/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da1e6a33-43de-4373-a74f-05d73e951446/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8daa3d10-6fe8-483c-9d98-08da077fb0e7/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da1e6a33-43de-4373-a74f-05d73e951446/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8daa3d10-6fe8-483c-9d98-08da077fb0e7/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da1e6a33-43de-4373-a74f-05d73e951446/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8daa3d10-6fe8-483c-9d98-08da077fb0e7/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1dc1e44-5460-459e-85bb-8e95e75cb2f9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b859017e-632c-4adb-83a1-5bda664966ae.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1dc1e44-5460-459e-85bb-8e95e75cb2f9/storage_v2/_src_/schema/system.L3Icyw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b859017e-632c-4adb-83a1-5bda664966ae/storage_v2/_src_/schema/system.L3Icyw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1dc1e44-5460-459e-85bb-8e95e75cb2f9/storage_v2/_src_/schema/system_schema.sb0HgQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b859017e-632c-4adb-83a1-5bda664966ae/storage_v2/_src_/schema/system_schema.sb0HgQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/client-service/client-service.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/transactions-service/transactions-service.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace 2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/kz/solva/task/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/kz/solva/task/apigateway/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/api/twelvedata/TwelveDataClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/api/twelvedata/TwelveDataClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/config/CassandraConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/config/CassandraConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/controller/CurrencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/controller/TransactionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/controller/TransactionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/currency/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/currency/CurrencyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/currency/impl/CurrencyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/service/currency/impl/CurrencyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/utils/transactions/TransactionsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/kz/solva/task/clientservice/utils/transactions/TransactionsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/controller/limit/LimitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/controller/limit/LimitController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/controller/payment/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/controller/payment/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/repository/payment/PaymentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/repository/payment/PaymentRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/impls/LimitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/impls/LimitServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/impls/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/impls/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/payment/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/payment/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/limit/LimitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/service/limit/LimitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/utils/limit/LimitUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/java/kz/solva/task/transactionsservice/utils/limit/LimitUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transactions-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/transactions-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,31 +62,10 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-    <projectState path="$PROJECT_DIR$/api-gateway">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/client-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/transaciton-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/transactions-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$USER_HOME$/Downloads/eureka-server">
-      <ProjectState />
-    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/transaciton-service">
-          <activation />
-        </task>
-        <task path="$PROJECT_DIR$/transactions-service">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -61,8 +78,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -70,119 +85,58 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="GradleRunConfiguration" name="Tests in 'eureka-server'" />
-    </enabled-run-configurations>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2fBtNrEv7Q2GNEpeQY4EJzhlkvd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2fOjNWZs9pTcRaO08agkawsIoQ2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "/Users/xzeexcz/Desktop/microservice/eureka-server",
+    "last_opened_file_path": "/Users/xzeexcz/Downloads/fmdskmfsdklmfdskm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Errors",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "postgresql",
-      "cassandra"
+      "cassandra",
+      "postgresql"
     ]
   }
 }]]></component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/eureka-server" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client-service/src/main/resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.ClientServiceApplication">
-    <configuration name="Tests in 'eureka-server'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":eureka-server:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="Spring Boot.TransactionsServiceApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="fmdskmfsdklmfdskm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="transactions-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/transactions-service" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="fmdskmfsdklmfdskm" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway.main" />
@@ -198,29 +152,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="client-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.clientservice.ClientServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClientServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="transaciton-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.clientservice.ClientServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaServerApplication " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eureka-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="kz.solva.task.eurekaserver.EurekaServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kz.solva.task.eurekaserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -232,210 +166,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Gradle.transactions-service [build]" />
-      <item itemvalue="Gradle.Tests in 'eureka-server'" />
-      <item itemvalue="Spring Boot.ClientServiceApplication" />
-      <item itemvalue="Spring Boot.TransactionsServiceApplication" />
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
-      <item itemvalue="Spring Boot.EurekaServerApplication " />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.EurekaServerApplication " />
-        <item itemvalue="Gradle.transactions-service [build]" />
-        <item itemvalue="Gradle.Tests in 'eureka-server'" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SpringBeansView">
-    <option name="beanDetailsProportion" value="0.3" />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="75413929-691e-4c46-8f0c-10f81c931d0e" name="Changes" comment="" />
-      <created>1713286262727</created>
+      <changelist id="1df2f1f8-1dee-492c-a801-5bfae9a5be65" name="Changes" comment="" />
+      <created>1713678979112</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713286262727</updated>
-      <workItem from="1713286263784" duration="2102000" />
-      <workItem from="1713288497248" duration="94178000" />
-      <workItem from="1713560531790" duration="1462000" />
-      <workItem from="1713605369771" duration="14415000" />
+      <updated>1713678979112</updated>
+      <workItem from="1713678980326" duration="14583000" />
     </task>
-    <task id="LOCAL-00001" summary="init">
-      <option name="closed" value="true" />
-      <created>1713286386515</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1713286386515</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added transaction-service to the microservice">
-      <option name="closed" value="true" />
-      <created>1713347886555</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1713347886555</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Сделал http запрос на api &#10;Добавил нужные библиотеки, логирование запросов">
-      <option name="closed" value="true" />
-      <created>1713365938655</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1713365938655</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Рефакторинг кода и добавил NoSQL Cassandra">
-      <option name="closed" value="true" />
-      <created>1713374108369</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1713374108369</updated>
-    </task>
-    <task id="LOCAL-00005" summary="рабочий вариант - тест">
-      <option name="closed" value="true" />
-      <created>1713375377131</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1713375377132</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Рефакторинг кода">
-      <option name="closed" value="true" />
-      <created>1713376898947</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713376898947</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Client service added + transaction service working at">
-      <option name="closed" value="true" />
-      <created>1713424174034</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1713424174034</updated>
-    </task>
-    <task id="LOCAL-00008" summary="New service">
-      <option name="closed" value="true" />
-      <created>1713424182388</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1713424182388</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Working micro v1 arch">
-      <option name="closed" value="true" />
-      <created>1713428215157</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1713428215157</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Добавлен второй клиентский сервис. Выполнено четыре пункта из 6">
-      <option name="closed" value="true" />
-      <created>1713546963030</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1713546963030</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Корректно работают транзакции - по всем валютам">
-      <option name="closed" value="true" />
-      <created>1713549839076</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1713549839076</updated>
-    </task>
-    <task id="LOCAL-00012" summary="ПОЛНОСТЬЮ РАБОЧИЕ ТРАНЗААКЦИИ">
-      <option name="closed" value="true" />
-      <created>1713555546321</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1713555546322</updated>
-    </task>
-    <task id="LOCAL-00013" summary="100% рабочие транзакции">
-      <option name="closed" value="true" />
-      <created>1713558234861</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1713558234861</updated>
-    </task>
-    <task id="LOCAL-00014" summary="немного улучшил читаемость кода">
-      <option name="closed" value="true" />
-      <created>1713559063718</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1713559063718</updated>
-    </task>
-    <task id="LOCAL-00015" summary="рефакторинг">
-      <option name="closed" value="true" />
-      <created>1713561285082</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1713561285082</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Onemore">
-      <option name="closed" value="true" />
-      <created>1713561302382</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1713561302382</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Добавлена функция установления нового лимита">
-      <option name="closed" value="true" />
-      <created>1713651303269</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1713651303270</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="init" />
-    <MESSAGE value="Added transaction-service to the microservice" />
-    <MESSAGE value="Сделал http запрос на api &#10;Добавил нужные библиотеки, логирование запросов" />
-    <MESSAGE value="Рефакторинг кода и добавил NoSQL Cassandra" />
-    <MESSAGE value="рабочий вариант - тест" />
-    <MESSAGE value="Рефакторинг кода" />
-    <MESSAGE value="Client service added + transaction service working at" />
-    <MESSAGE value="New service" />
-    <MESSAGE value="Working micro v1 arch" />
-    <MESSAGE value="Добавлен второй клиентский сервис. Выполнено четыре пункта из 6" />
-    <MESSAGE value="Корректно работают транзакции - по всем валютам" />
-    <MESSAGE value="ПОЛНОСТЬЮ РАБОЧИЕ ТРАНЗААКЦИИ" />
-    <MESSAGE value="100% рабочие транзакции" />
-    <MESSAGE value="немного улучшил читаемость кода" />
-    <MESSAGE value="рефакторинг" />
-    <MESSAGE value="Onemore" />
-    <MESSAGE value="Добавлена функция установления нового лимита" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена функция установления нового лимита" />
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
 </project>

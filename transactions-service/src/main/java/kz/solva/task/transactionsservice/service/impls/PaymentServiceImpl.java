@@ -13,6 +13,7 @@ import kz.solva.task.transactionsservice.service.payment.PaymentService;
 import kz.solva.task.transactionsservice.utils.limit.LimitUtils;
 import kz.solva.task.transactionsservice.utils.payment.PaymentUtils;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +28,7 @@ import java.util.concurrent.Executors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PaymentServiceImpl implements PaymentService {
     private final PaymentRepo paymentRepo;
     private final LimitRepo limitRepo;
@@ -34,12 +36,11 @@ public class PaymentServiceImpl implements PaymentService {
     private final LimitService limitService;
     private final LimitUtils limitUtils;
     private final PaymentUtils paymentUtils;
-    private final Logger logger = LoggerFactory.getLogger(Payment.class);
     private final Logger loggerLimit = LoggerFactory.getLogger(Limit.class);
-    private final ExecutorService executorService = Executors.newFixedThreadPool(4);
+    private final ExecutorService executorService;
 
     @Override
-    public ResponseEntity<? extends Object> makePayment(PaymentDto paymentDto) {
+    public ResponseEntity<String> makePayment(PaymentDto paymentDto) {
         if (paymentDto != null) {
             Payment payment = paymentMapper.toPaymentEntity(paymentDto);
             try {
@@ -95,7 +96,7 @@ public class PaymentServiceImpl implements PaymentService {
                     });
                 }
             } catch (NullPointerException e) {
-                logger.atWarn().log("Произошла ошибка при проверке на ранее установленный лимит");
+                log.atWarn().log("Произошла ошибка при проверке на ранее установленный лимит");
                 e.printStackTrace();
             }
             return ResponseEntity.ok("Транзакция была успешна");

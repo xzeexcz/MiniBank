@@ -14,6 +14,7 @@ import java.util.List;
 @Configuration
 @EnableCassandraRepositories
 public class CassandraConfig extends AbstractCassandraConfiguration {
+    // антипаттерн magicNumbers
     public static final String KEYSPACE = "adia";
     public static final String LOCAL_DATA_CENTER = "datacenter1";
     @Bean

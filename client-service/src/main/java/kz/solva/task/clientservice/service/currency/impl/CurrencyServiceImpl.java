@@ -8,6 +8,7 @@ import kz.solva.task.clientservice.mapper.currency.CurrencyMapper;
 import kz.solva.task.clientservice.repository.currency.CurrencyRepo;
 import kz.solva.task.clientservice.service.currency.CurrencyService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -21,24 +22,26 @@ import java.util.concurrent.ExecutionException;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CurrencyServiceImpl implements CurrencyService {
     private final CurrencyMapper currencyMapper;
     private final CurrencyRepo currencyRepo;
     private final TwelveDataClient twelveDataClient;
-    private final Logger logger = LoggerFactory.getLogger(Currency.class);
     @Override
-    public ResponseEntity<? extends Object> addCurrency() throws ExecutionException, InterruptedException {
+    public ResponseEntity<String> addCurrency() throws ExecutionException, InterruptedException {
         List<TwelveDataResponse> responses = twelveDataClient.getQuotes();
         try {
-            logger.info("Трансформация в сущность");
+            log.info("Трансформация в сущность");
             List<Currency> currencyList = currencyMapper.toCurrencyEntityList(responses);
-            for(Currency currency : currencyList)
+
+            for(Currency currency : currencyList) {
                 currency.setId(UUID.randomUUID());
+            }
             currencyRepo.saveAll(currencyList);
-            logger.info("Стоимость курсов валютных пар успешно добавлена");
+            log.info("Стоимость курсов валютных пар успешно добавлена");
             return ResponseEntity.ok("Success");
         } catch (RestClientException e) {
-            logger.atWarn().log(e.getMessage());
+            log.atWarn().log(e.getMessage());
             return ResponseEntity.ok("Failed");
         }
     }
@@ -48,7 +51,7 @@ public class CurrencyServiceImpl implements CurrencyService {
         List<Currency> currencies = currencyRepo.findBySymbolEquals("USD/KZT");
 
         if (currencies.isEmpty()) {
-            logger.info("Установка актуальных курсов.");
+            log.info("Установка актуальных курсов.");
             addCurrency();
             currencies = currencyRepo.findBySymbolEquals("USD/KZT");
         }
@@ -65,7 +68,7 @@ public class CurrencyServiceImpl implements CurrencyService {
         List<Currency> currencies = currencyRepo.findBySymbolEquals("RUB/USD");
 
         if (currencies.isEmpty()) {
-            logger.info("Установка актуальных курсов.");
+            log.info("Установка актуальных курсов.");
             addCurrency();
             currencies = currencyRepo.findBySymbolEquals("RUB/USD");
         }

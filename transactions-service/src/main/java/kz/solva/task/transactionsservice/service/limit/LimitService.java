@@ -7,5 +7,4 @@ import java.math.BigDecimal;
 
 public interface LimitService {
     Limit isExists(BigDecimal account, ExpenseCategory expenseCategory);
-//    void setNewLimit(BigDecimal account, String category, double sum);
 }
