@@ -64,7 +64,7 @@ git clone https://github.com/xzeexcz/fmdskmfsdklmfdskm.git
 ----
 Если нет, установите БД на локальную машину и создайте БД по этим данным: 
 * PostgresSQL: 
-    * Port: 2345 
+    * Port: 5432 
     * Username: myuser
     * Password: qweqwe
 * Apache Cassandra: 
@@ -87,7 +87,7 @@ CREATE KEYSPACE IF NOT EXISTS adik WITH replication = {'class': 'SimpleStrategy'
 ``` 
 * После того, как запустился контейнер my-cs, нам следует поднять контейнер с БД postgres
 ```bash
-docker run -d —name my-pg-db -e POSTGRES_PASSWORD=qweqwe -e POSTGRES_USER=myuser -p 2345:2345 postgres:13.3
+docker run —name my-pg -e POSTGRES_PASSWORD=qweqwe -e POSTGRES_USER=myuser -e POSTGRES_DB=transactions -p 5432:5432 postgres
 ``` 
 * 1.8 После того как все контейнеры поднялись, запускаем эту команду в КОРНЕВОЙ папке проекта
 ```bash
